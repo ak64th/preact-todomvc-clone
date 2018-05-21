@@ -10,12 +10,7 @@ import {
 
 const {SHOW_ALL} = VisibilityFilters;
 
-const initialTodos = [
-  {id: uniqueId('todo_'), text: 'abc', completed: false},
-  {id: uniqueId('todo_'), text: 'def', completed: true},
-]
-
-function todos(state = initialTodos, action) {
+function todos(state = [], action) {
   switch (action.type) {
     case ADD_TODO:
       return [...state, {
