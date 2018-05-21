@@ -33,7 +33,6 @@ const Todo = ({todo: {text, completed}, onToggleClick, onDestroyClick}) => {
           }}
         />
       </div>
-      <input class={style.edit} value={text}></input>
     </li>
   )
 }

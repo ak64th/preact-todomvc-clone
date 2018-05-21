@@ -13,14 +13,11 @@ if (module.hot) {
 class App extends Component {
 	render() {
 		return (
-			<div role="application">
-        <section class={style.todoapp}>
-          <Header />
-          <TodoList />
-          <Footer />
-        </section>
-        <Info />
-			</div>
+      <section class={style.todoapp}>
+        <Header />
+        <TodoList />
+        <Footer />
+      </section>
 		);
 	}
 }
