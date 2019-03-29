@@ -1,16 +1,25 @@
 import { h, Component } from 'preact';
+import { css } from 'emotion';
 import { connect } from 'preact-redux';
-import style from './style';
+
+const todoCount = css`
+	float: left;
+	text-align: left;
+
+  & strong {
+  	font-weight: 300;
+  }
+`;
 
 const mapStateToProps = ({todos}) => ({
-  count: todos.filter((t) => t.completed).length
+  count: todos.filter((t) => !t.completed).length
 });
 
 class TodoCount extends Component {
   render() {
     const {count} = this.props;
     return (
-      <span class={style['todo-count']}>
+      <span class={todoCount}>
         <strong>{count}</strong> item left
       </span>
     )

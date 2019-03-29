@@ -1,7 +1,6 @@
 import { h, Component } from 'preact';
 import { connect } from 'preact-redux';
 import {toggleTodo, destroyTodo} from '../actions';
-import style from './style';
 
 const mapDispatchToProps = (dispatch, {todo: {id}}) => {
   return {
@@ -12,10 +11,10 @@ const mapDispatchToProps = (dispatch, {todo: {id}}) => {
 
 const Todo = ({todo: {text, completed}, onToggleClick, onDestroyClick}) => {
   return (
-    <li class={completed?style.completed:''}>
-      <div class={style.view}>
+    <li class={completed?'completed':''}>
+      <div class={'view'}>
         <input
-          class={style['toggle']}
+          class={'toggle'}
           type="checkbox"
           checked={completed}
           onChange={(e) => {
@@ -26,7 +25,7 @@ const Todo = ({todo: {text, completed}, onToggleClick, onDestroyClick}) => {
         </input>
         <label>{text}</label>
         <button
-          class={style.destroy}
+          class={'destroy'}
           onClick={(e) => {
             e.preventDefault();
             onDestroyClick();

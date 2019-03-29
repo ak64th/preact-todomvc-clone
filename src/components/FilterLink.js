@@ -1,13 +1,12 @@
 import { h, Component } from 'preact';
 import { connect } from 'preact-redux';
 import { setVisibilityFilter, VisibilityFilters } from '../actions';
-import style from './style';
 
 const Link = ({active, children, onClick}) => (
   <li>
     <a
       href=''
-      class={active ? style.selected : ''}
+      class={active ? 'selected' : ''}
       onClick={(e) => {
         e.preventDefault();
         onClick();
