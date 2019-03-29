@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch) => ({
   onEnter: (text) => dispatch(addTodo(text))
 });
 
-const NewTodo = ({onEnter}) => (
+export const NewTodo = ({onEnter}) => (
   <input
     class={newTodo}
     placeholder="What needs to be done?"
