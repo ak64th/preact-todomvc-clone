@@ -5,7 +5,7 @@ import style from './style';
 export default class Header extends Component {
   render() {
     return (
-      <header class={style.header}>
+      <header>
         <h1>todos</h1>
         <NewTodo />
       </header>
